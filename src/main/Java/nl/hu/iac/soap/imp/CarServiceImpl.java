@@ -22,7 +22,6 @@ import nl.hu.iac.soap.wsinterface.UpdatecarRequest;
 import nl.hu.iac.soap.wsinterface.UpdatecarResponse;
 import nl.hu.iac.soap.wsinterface.CarServiceInterface;
 
-
 /**
  * Created by bobby on 6/20/2017.
  */
