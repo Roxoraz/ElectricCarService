@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.hu.iac/carservice/deleterequest"
+           elementFormDefault="qualified" targetNamespace="http://nl.hu.iac/carservice/deleterequest">
+
+    <!-- root element -->
+    <xs:element name="deletecarRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="AutoID" type="xs:nonNegativeInteger" />
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.hu.iac/carservice/updaterequest"
+           elementFormDefault="qualified" targetNamespace="http://nl.hu.iac/carservice/updaterequest">
+
+    <!-- root element -->
+    <xs:element name="updatecarRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="AutoId" type="xs:nonNegativeInteger" />
+                <xs:element name="Merk" type="xs:string" />
+                <xs:element name="Prijs" type="xs:double" />
+                <xs:element name="Beschrijving" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+</xs:schema>

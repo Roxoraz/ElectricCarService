@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	name="CarService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:req="http://nl.hu.iac/carservice/addrequest"
+	xmlns:rsp="http://nl.hu.iac/carservice/addresponse"
+	xmlns:rreq="http://nl.hu.iac/carservice/readrequest"
+	xmlns:rrsp="http://nl.hu.iac/carservice/readresponse"
+	xmlns:dreq="http://nl.hu.iac/carservice/deleterequest"
+	xmlns:drsp="http://nl.hu.iac/carservice/deleteresponse"
+	xmlns:ureq="http://nl.hu.iac/carservice/updaterequest"
+	xmlns:ursp="http://nl.hu.iac/carservice/updateresponse"
+	xmlns:flt="http://nl.hu.iac/carservice/fault"
+	xmlns="http://nl.hu.iac/car/"
+	targetNamespace="http://nl.hu.iac/car/">
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://nl.hu.iac/carservice/addrequest"
+						schemaLocation="addrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/addresponse"
+						schemaLocation="addresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/readrequest"
+						schemaLocation="readrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/readresponse"
+						schemaLocation="readresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/deleterequest"
+						schemaLocation="deleterequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/deleteresponse"
+						schemaLocation="deleteresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/updaterequest"
+						schemaLocation="updaterequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/updateresponse"
+						schemaLocation="updateresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/carservice/fault"
+				schemaLocation="fault.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="addrequest">
+		<wsdl:part name="addrequest" element="req:addcarRequest"/>
+	</wsdl:message>
+	<wsdl:message name="addresponse">
+		<wsdl:part name="addresponse" element="rsp:addcarResponse"/>
+	</wsdl:message>
+	<wsdl:message name="readrequest">
+		<wsdl:part name="readrequest" element="rreq:readcarRequest"/>
+	</wsdl:message>
+	<wsdl:message name="readresponse">
+		<wsdl:part name="readresponse" element="rrsp:readcarResponse"/>
+	</wsdl:message>
+	<wsdl:message name="deleterequest">
+		<wsdl:part name="deleterequest" element="dreq:deletecarRequest"/>
+	</wsdl:message>
+	<wsdl:message name="deleteresponse">
+		<wsdl:part name="deleteresponse" element="drsp:deletecarResponse"/>
+	</wsdl:message>
+	<wsdl:message name="updaterequest">
+		<wsdl:part name="updaterequest" element="ureq:updatecarRequest"/>
+	</wsdl:message>
+	<wsdl:message name="updateresponse">
+		<wsdl:part name="updateresponse" element="ursp:updatecarResponse"/>
+	</wsdl:message>
+	<wsdl:message name="fault">
+		<wsdl:part name="fault" element="flt:carFault"/>
+	</wsdl:message>
+	<wsdl:portType name="carServiceInterface">
+		<wsdl:operation name="addCar">
+			<wsdl:input message="addrequest"/>
+			<wsdl:output message="addresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="readCar">
+			<wsdl:input message="readrequest"/>
+			<wsdl:output message="readresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="deleteCar">
+			<wsdl:input message="deleterequest"/>
+			<wsdl:output message="deleteresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="updateCar">
+			<wsdl:input message="updaterequest"/>
+			<wsdl:output message="updateresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="carServiceBinding" type="carServiceInterface">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="addCar">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="readCar">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="deleteCar">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="updateCar">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="carServiceService">
+		<wsdl:port name="WS-Port" binding="carServiceBinding">
+			<soap:address location="http://localhost:8080/carservice/soap"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
